@@ -9,7 +9,8 @@ RUN apt-get autoremove -y
 RUN apt-get clean -y
 
 # Install some things people will probably use
-RUN curl -sL https://github.com/kminehart/jules/releases/download/0.2.0/jules > /bin/jules
+RUN curl -sL https://github.com/kminehart/jules/releases/download/v0.2.0/jules > /bin/jules                                                                                           
+
 
 RUN chmod +x /bin/jules
 
