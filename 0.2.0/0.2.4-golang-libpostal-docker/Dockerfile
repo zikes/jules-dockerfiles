@@ -47,6 +47,8 @@ RUN go get -u google.golang.org/grpc
 RUN go get -u github.com/golang/protobuf/proto
 RUN go get -u github.com/golang/protobuf/protoc-gen-go
 
+RUN docker pull cockroachdb/cockroach:v1.1.2
+
 RUN wget https://github.com/google/protobuf/archive/v3.5.0.tar.gz && \
   tar -xvf v3.5.0.tar.gz && cd protobuf-3.5.0 && \
   ./autogen.sh && ./configure && make && make install && ldconfig
